@@ -40,7 +40,8 @@ async function main() {
   });
 }
 main().catch(async (error) => {
-  console.error("No se pudo iniciar la aplicación:", error); // <-- Cambia error.name por error completo
+  console.error("No se pudo iniciar la aplicación:", error.name);
+  console.error("Revisar entorno, DNS, red, acceso de Atlas y puerto.");
   process.exitCode = 1;
   try {
     await desconectarBaseDatos();
@@ -48,3 +49,6 @@ main().catch(async (error) => {
     console.error("Error al cerrar:", fallo.name);
   }
 });
+
+//  console.error("No se pudo iniciar la aplicación:", error); // <-- Cambia error.name por error completo
+// process.exitCode = 1;

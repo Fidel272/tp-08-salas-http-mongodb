@@ -51,7 +51,6 @@ function crearApp({ servicioReservas, formatoRegistro }) {
     });
   });
 
-
   app.use(
     crearManejadorErrores({
       vistaFormulario: "reservas/nueva",

@@ -39,8 +39,8 @@ const reservaSchema = new mongoose.Schema(
     estado: {
       required: true,
       type: String,
-      enum: ["Pendiente", "Confirmada"],
-      default: "Pendiente",
+      enum: ["pendiente", "confirmada"],
+      default: "pendiente",
     },
   },
   //Se especifica el nombre de la colección en la db donde se almacenarán los documentos de este modelo

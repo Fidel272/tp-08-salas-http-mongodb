@@ -82,7 +82,8 @@ function crearControladorReservas(servicioReservas) {
    */
   async function crearApi(req, res) {
     const reservaGuardada = await servicioReservas.crear(req.reservaValidada);
-    res.status(201)
+    res
+      .status(201)
       .location(`/api/reservas/${reservaGuardada.id}`)
       .json(reservaGuardada);
   }
@@ -94,7 +95,7 @@ function crearControladorReservas(servicioReservas) {
     crear,
     listarApi,
     obtenerApi, // <-- Añadido para que coincida con reservas-api.js
-    crearApi,   // <-- Añadido para que coincida con reservas-api.js
+    crearApi, // <-- Añadido para que coincida con reservas-api.js
   };
 }
 
