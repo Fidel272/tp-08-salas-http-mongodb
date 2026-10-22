@@ -1,4 +1,4 @@
-# Trabajo práctico 08: Aplicación Web y API REST con Node.js, Express, Mongoose y MongoDB
+# Trabajo práctico 08: Endpoints persistentes de reservas de salas
 
 Trabajo Práctico correspondiente al Módulo 3 de Desarrollo Full-Stack (Nodo Tecnológico). Evolución arquitectónica del proyecto de reservas de salas, migrando los scripts de consola del TP-07 hacia una arquitectura web full-stack y API REST completa basada en HTTP, Express y persistencia asíncrona con Mongoose.
 
@@ -70,8 +70,8 @@ npm run start
 | Método | Ruta | Descripción | Código de Respuesta Exitoso |
 | :--- | :--- | :--- | :--- |
 | GET | /api/reservas | Obtiene el listado completo. Soporta filtro exacto con query param ?sala=.... | 200 OK |
-| POST | /api/reservas | Valida y persiste una nueva reserva en la BD. | Dato 2.4 |
-| GET | /api/reservas/:id | Dato 3.3 | 201 Created (+ Header Location) |
+| POST | /api/reservas | Valida y persiste una nueva reserva en la BD. | 201 Created (+ Header Location) |
+| GET | /api/reservas/:id | Devuelve el detalle de una reserva específica por su ID de MongoDB. | 201 Created 200 OK |
 | GET | /estado | Verifica el estado del servidor y el conteo de registros actuales en la BD. | 200 OK |
 
 ## 6. Límites de Validación y Casos Negativos
